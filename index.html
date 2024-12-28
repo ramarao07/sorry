@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Ways to Say Sorry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf6e3;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background-color: #ff6f61;
+      color: #fff;
+      padding: 20px;
+      font-size: 24px;
+    }
+    section {
+      padding: 20px;
+    }
+    .sorry-box {
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #ff6f61;
+      border-radius: 10px;
+      background-color: #fff;
+      max-width: 600px;
+    }
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #ff6f61;
+      color: #fff;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #ff6f61;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #e65a50;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  10 Ways to Say Sorry
+</header>
+
+<section>
+  <div class="sorry-box" id="sorry-message">
+    <h2>Hey love, I’m truly sorry.</h2>
+    <p>Click the button below to see all the ways I want to say sorry.</p>
+    <button class="button" onclick="showSorry()">Show Next Sorry</button>
+  </div>
+</section>
+
+<footer>
+  Made with ❤ for you.
+</footer>
+
+<script>
+  const sorryMessages = [
+    "I'm so sorry, my love. You mean the world to me.",
+    "A heartfelt apology: I'm sorry for my mistake.",
+    "You deserve the best, and I promise to do better. Sorry!",
+    "I wrote you a poem: 'Roses are red, violets are blue, I'm so sorry for hurting you.'",
+    "A promise: I'll never make this mistake again. Sorry!",
+    "A virtual hug to say I'm sorry! 🤗",
+    "Forgive me, love. I can't bear to see you upset.",
+    "You're my everything. Please accept my apology.",
+    "No words can truly express my regret. I'm so sorry.",
+    "Thank you for forgiving me. I love you endlessly! Love you sooo much my dear bujji BAMA"
+  ];
+
+  let index = 0;
+
+  function showSorry() {
+    const messageBox = document.getElementById("sorry-message");
+    if (index < sorryMessages.length) {
+      messageBox.innerHTML = `
+        <h2>${sorryMessages[index]}</h2>
+        <button class="button" onclick="showSorry()">Show Next Sorry</button>
+      `;
+      index++;
+    } else {
+      messageBox.innerHTML = `
+        <h2>Thank you for forgiving me! ❤</h2>
+      `;
+    }
+  }
+</script>
+
+</body>
+</html>
